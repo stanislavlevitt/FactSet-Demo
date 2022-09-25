@@ -17,7 +17,7 @@ describe('Api routes', () => {
 
   describe('/api/github/limit', () => {
 
-    let limit = Math.floor(Math.random() * 100) + 1
+    const limit = Math.floor(Math.random() * 100) + 1
 
     it('GET /api/github/limit', async () => {
       const res = await request(app)
@@ -26,6 +26,25 @@ describe('Api routes', () => {
         expect(res.body.Repositories).to.have.lengthOf(limit)
     })
   }) // end describe('/api/github/limit')
+
+  describe('/api/github/date', () => {
+
+    const limit = Math.floor(Math.random() * 5) + 1
+    const date = `2022-02-10`
+    it('GET /api/github/date', async () => {
+      const res = await request(app)
+        .get(`/api/github/${limit}?date=${date}`)
+        .expect(200)
+
+        const startDate = new Date(date);
+        res.body.Repositories.forEach(repo => {
+          const repoDate = new Date(repo.date);
+          expect(repoDate).to.be.greaterThan(startDate)
+        });
+
+        expect(res.body.Repositories).to.have.lengthOf(limit)
+    })
+  }) // end describe('/api/github/date')
 
   describe('error handle', () => {
 
