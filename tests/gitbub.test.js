@@ -15,6 +15,18 @@ describe('Api routes', () => {
     })
   }) // end describe('/api/github')
 
+  describe('/api/github/limit', () => {
+
+    let limit = Math.floor(Math.random() * 100) + 1
+
+    it('GET /api/github/limit', async () => {
+      const res = await request(app)
+        .get(`/api/github/${limit}`)
+        .expect(200)
+        expect(res.body.Repositories).to.have.lengthOf(limit)
+    })
+  }) // end describe('/api/github/limit')
+
   describe('error handle', () => {
 
     it('GET /api/someRoute', async () => {
