@@ -31,7 +31,7 @@ The page will reload if you make edits.
 <p align="center"><strong>In order to view the most popular repositories, sorted by number of stars. Visit your localhost and enter the url "/api/github"</strong></p>
 
 <p align="center">
-  <img src="/public/getAll.gif"/>
+  <img src="/public/GetAll.gif"/>
 </p>
 <br />
 
@@ -40,7 +40,7 @@ The page will reload if you make edits.
 <p align="center"><strong>NOTE: If your limit is not a integer number, it will return the default amount that is specified by the Github Api</strong></p>
 
 <p align="center">
-  <img src="/public/getLimits.gif"/>
+  <img src="/public/GetLimit.gif"/>
 </p>
 <br />
 
@@ -51,6 +51,6 @@ The page will reload if you make edits.
 Further development is needed to workaround this limitation of the Github Api</strong></p>
 
 <p align="center">
-  <img src="/public/getDate.gif"/>
+  <img src="/public/GetDate.gif"/>
 </p>
 <br />
