@@ -33,6 +33,6 @@ const displayResponse = async (response, res) =>{
     })
   })
 
-  if(data.incomplete_results) res.send({Warning: "Results may be inaccurate due to high search results", repositories: list})
-  else res.send({repositories: list})
+  if(data.incomplete_results) res.send({Warning: "Results may be inaccurate due to high search results", Repositories: list})
+  else res.send({Repositories: list})
 }
