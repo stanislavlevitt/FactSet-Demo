@@ -1,7 +1,7 @@
 **Demo Project for FactSet**
 <br/>
 
-Coding Challenge was completed in less than four hours.  This backend application integrates with the GitHub Api in order to discover popular repositories on GitHub.
+The coding challenge was completed in less than four hours.  This backend application integrates with the GitHub Api in order to discover popular repositories on GitHub.
 
 <br />
 
@@ -27,22 +27,25 @@ The page will reload if you make edits.
 ## App Walk through
 
 ---
-
+## View Most Popular Repositories<br />
 <p align="center"><strong>In order to view the most popular repositories, sorted by number of stars. Visit your localhost and enter the url "/api/github"</strong></p>
 
 <p align="center">
-  <img src="/public/GetAll.gif"/>
+  <img src="/public/GetAllRepos.gif"/>
 </p>
 <br />
 
-<p align="center"><strong> You can limit the amout of repositories seen by adding a limit number to your URL parameters. Once you add the limit you can view the top 10,50,100 repositories by stars. Visit your localhost and enter the url "/api/github/10"</strong></p>
+## Scope Most Popular Repositories By Limit<br />
+<p align="center"><strong> You can limit the amount of repositories seen by adding a limit number to your URL parameters. Once you add the limit you can view the top 10,50,100 repositories by stars. Visit your localhost and enter the url "/api/github/10"</strong></p>
 
 <p align="center"><strong>NOTE: If your limit is not a integer number, it will return the default amount that is specified by the Github Api</strong></p>
 
 <p align="center">
-  <img src="/public/GetLimit.gif"/>
+  <img src="/public/GetReposWithLimit.gif"/>
 </p>
 <br />
+
+## Scope Most Popular Repositories With Limit And Date<br />
 
 <p align="center"><strong> You can include a date range when scoping your repositories limits by including "?date=2022-07-10" at the end of your URL. This will limit results to repositories newer than your date limitVisit your localhost and enter the url "/api/github/1?date=2022-07-10"</strong></p>
 
@@ -51,6 +54,6 @@ The page will reload if you make edits.
 Further development is needed to workaround this limitation of the Github Api</strong></p>
 
 <p align="center">
-  <img src="/public/GetDate.gif"/>
+  <img src="/public/GetReposWithDate.gif"/>
 </p>
 <br />
